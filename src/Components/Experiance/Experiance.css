@@ -1,0 +1,174 @@
+
+
+.experiancepage {
+  background-image: url('../../assets/experiance.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif; /* Replace with your chosen font */
+}
+
+.card-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure cards wrap for smaller screens */
+  padding: 20px;
+}
+
+.expinside {
+  margin-bottom: 0px;
+  border: 1.5px solid black;
+  width: 750px; /* Fixed width for large screens */
+  height: 150px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color:#F8F8FF ;
+  transition: transform 0.2s, box-shadow 0.5s;
+}
+
+.expoutside {
+  width: 900px; /* Large width for desktops */
+  padding: 20px;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.expinside:hover {
+  transform: scale(1.08); /* Enlarge slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  margin-top: -5px;
+}
+
+img {
+  width: 30px;
+}
+
+.h4 {
+  margin-top: -20px;
+}
+
+.experience-container {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  margin-right: 10px;
+}
+
+.text-container h5,
+.text-container h4 {
+  margin: 0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .expinside {
+    width: 80%; /* Reduce width for tablets */
+    height: auto; /* Allow content to dictate height */
+    padding: 15px;
+  }
+
+  .expoutside {
+    width: 80%; /* Reduce width for tablets */
+    height: auto;
+  }
+
+  .img {
+    width: 25px; /* Adjust image size for tablets */
+  }
+
+  .h4 {
+    font-size: 1.5rem; /* Adjust heading size for tablets */
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .expinside {
+    width: 95%; /* Full width for mobile screens */
+    padding: 10px;
+    height: auto;
+  }
+
+  .expoutside {
+    width: 95%; /* Full width for mobile screens */
+    height: auto;
+  }
+
+  .img {
+    width: 20px; /* Further reduce image size */
+  }
+
+  .h4 {
+    font-size: 1.25rem; /* Smaller heading size for mobile */
+  }
+
+  .card-container {
+    gap: 15px; /* Reduce gap between cards */
+  }
+
+  .experience-container {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .text-container {
+    text-align: left; /* Align text to the left for mobile */
+  }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+  .expinside {
+    width: 100%; /* Full width for small devices */
+    padding: 8px;
+  }
+
+  .expoutside {
+    width: 100%; /* Full width for small devices */
+  }
+
+  .img {
+    width: 18px; /* Small image size */
+  }
+
+  .h4 {
+    font-size: 1rem; /* Further reduce heading size */
+  }
+
+  .card-container {
+    gap: 10px; /* Minimize gap for very small screens */
+  }
+
+  .text-container h5,
+  .text-container h4 {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+}

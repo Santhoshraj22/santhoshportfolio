@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  justify-content: flex-end; /* Align child items to the right */
+  align-items: center;
+  height: 100vh;             /* Full viewport height */
+  padding: 0 20px;
+}
+
+.aboutoutside {
+  width: 900px;               /* Default width for larger screens */
+  padding: 20px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.Aboutsection {
+  background-image: url('../../assets/aboutpage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.aboutinside {
+  margin-bottom: 20px;
+  border: 1.5px solid black;
+  width: 700px;
+  height: 170px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #F8F8FF;
+  transition: transform 0.2s, box-shadow 0.5s;
+}
+
+.aboutinside:hover {
+  transform: scale(1.08); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif; /* Replace with your chosen font */
+}
+
+.h5 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Media queries for responsiveness */
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  .aboutoutside {
+    width: 80%;              /* Adjust width for tablet screens */
+    height: auto;            /* Allow height to adjust based on content */
+    padding: 20px;
+  }
+
+  .aboutinside {
+    width: 90%;              /* Adjust the width of inner sections */
+  }
+
+  .card-container {
+    flex-direction: column;   /* Stack cards vertically for smaller screens */
+    gap: 15px;                /* Adjust gap between cards */
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .aboutoutside {
+    width: 95%;              /* Almost full width for mobile screens */
+    height: auto;            /* Allow height to grow based on content */
+    padding: 15px;
+  }
+
+  .aboutinside {
+    width: 100%;             /* Full width of the container for mobile */
+    height: auto;            /* Height adjusts to content */
+    padding: 15px;           /* Adjust padding for smaller screens */
+  }
+
+  .container {
+    justify-content: center;  /* Center content on mobile */
+  }
+  
+  .card-container {
+    padding: 10px;           /* Reduce padding for mobile screens */
+    gap: 10px;               /* Adjust spacing between cards */
+  }
+}
+
+/* Very small mobile view */
+@media (max-width: 480px) {
+  .aboutoutside {
+    width: 100%;             /* Full width for very small screens */
+    padding: 10px;
+  }
+
+  .aboutinside {
+    width: 100%;             /* Full width of the container */
+    padding: 10px;
+  }
+
+  .h5 {
+    font-size: 16px;         /* Reduce font size for smaller screens */
+  }
+}

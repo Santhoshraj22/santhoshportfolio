@@ -1,0 +1,115 @@
+.skill {
+  border: 2px solid #ddd;
+  width: 800px; /* Fixed width for larger screens */
+  padding: 20px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: whitesmoke;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.skillpage {
+  background-image: url('../../assets/skills.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.icon-container,
+.icon-container1 {
+  display: flex;
+  justify-content: center; /* Center align the icons */
+  gap: 55px;
+  padding: 50px;
+  margin-bottom: -50px;
+}
+
+.html {
+  font-size: 30px;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  color: #333;
+  transition: transform 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.html:hover {
+  transform: translateY(-10px) scale(1.1); /* Move up and scale slightly */
+  color: #ff6347;
+  box-shadow: 0 4px 15px rgba(255, 99, 71, 0.5);
+}
+
+/* Media queries for responsiveness */
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  .skill {
+    width: 80%;  /* Adjust width for tablet screens */
+    height: auto;  /* Allow height to adjust based on content */
+    padding: 20px;
+  }
+
+  .icon-container,
+  .icon-container1 {
+    gap: 40px;  /* Reduce the gap between icons for tablets */
+    padding: 40px;
+  }
+
+  .html {
+    font-size: 28px;  /* Adjust icon size for tablets */
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .skill {
+    width: 95%;  /* Almost full width for mobile screens */
+    padding: 15px;  /* Reduce padding for better space management */
+    height: auto;  /* Allow height to grow based on content */
+  }
+
+  .icon-container,
+  .icon-container1 {
+    flex-wrap: wrap;  /* Stack icons in multiple rows on smaller screens */
+    justify-content: center;  /* Center align icons */
+    gap: 20px;  /* Reduce gap between icons */
+    padding: 30px;
+  }
+
+  .html {
+    font-size: 24px;  /* Smaller icon size for mobile */
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Small mobile view */
+@media (max-width: 480px) {
+  .skill {
+    width: 100%;  /* Full width for very small screens */
+    padding: 10px;
+  }
+
+  .icon-container,
+  .icon-container1 {
+    flex-wrap: wrap;  /* Stack icons */
+    gap: 15px;  /* Further reduce gap for smaller screens */
+    padding: 20px;
+  }
+
+  .html {
+    font-size: 20px;  /* Even smaller icon size for very small screens */
+    width: 50px;
+    height: 50px;
+  }
+}

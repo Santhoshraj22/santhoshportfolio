@@ -1,0 +1,96 @@
+/* Base styling for larger screens */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 100px; /* Adjust spacing between links */
+}
+
+.Header a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.Header a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: khaki; /* Color of the underline */
+  left: 0;
+  bottom: -5px; /* Adjusts the distance of the line below the text */
+  transition: width 0.3s ease-in-out;
+}
+
+.Header a:hover::after {
+  width: 100%; /* Expands the underline to full width */
+}
+
+.Header a:hover {
+  color: khaki; /* Change link color on hover */
+}
+
+/* Active link */
+.nav-link.active {
+  color: yellow;
+}
+
+/* Menu button (visible on smaller screens) */
+.menu-btn {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* Media query for responsive layout (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between; /* Align menu button on the right */
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    cursor: pointer;
+    display: none; /* Hide the links by default on mobile */
+    flex-direction: column; /* Stack links vertically */
+    gap: 20px; /* Adjust gap for mobile */
+    background-color: black;
+    position: absolute;
+    top: 70px; /* Start below the navbar */
+    left: 0;
+    width: 100%; /* Full width */
+    padding: 20px;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show links when menu is toggled */
+  }
+
+  .menu-btn {
+    display: block; /* Show the menu button on smaller screens */
+  }
+
+  .Header a {
+    font-size: 18px; /* Increase font size for better readability */
+  }
+
+  .Header a::after {
+    bottom: -10px; /* Adjust underline position for mobile */
+  }
+}

@@ -1,0 +1,147 @@
+.projectpage {
+    border: 2px solid #ccc;       /* Lighter border color */
+    width: 90%;                   /* Set to 90% for responsive behavior */
+    max-width: 900px;             /* Maximum width to maintain card size */
+    padding: 20px;   
+    height: auto;                 /* Adjusted height to be flexible */
+    border-radius: 15px;          /* More rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Softer shadow for card effect */
+    background-color: #f9f9f9;    /* Light gray background for contrast */
+    margin: 20px auto;            /* Center align with auto margins */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover transition */
+}
+
+.card-container {
+    margin-top: 20px;
+    display: flex;                /* Use flexbox for layout */
+    flex-wrap: wrap;             /* Allow cards to wrap */
+    justify-content: center;      /* Center cards horizontally */
+    gap: 30px;                   /* Space between each card */
+    padding: 20px;    
+}
+
+.projectoutside {
+    width: 100%;                 /* Set to 100% for better responsiveness */
+    padding: 20px;   
+    height: auto;                /* Adjusted height to be flexible */
+    border-radius: 15px;         /* More rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Softer shadow for card effect */
+    margin: 20px 0;              /* Center align with auto margins */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover transition */
+}
+
+.projectinside {
+    border: 2px solid #ddd;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;      /* White background for cards */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    cursor: pointer;
+    display: flex;               /* Flexbox for content alignment */
+    flex-direction: column;      /* Arrange items vertically */
+    align-items: center;         /* Center items horizontally */
+    justify-content: center;      /* Center items vertically */
+}
+
+.projectname {
+    color: #333;                 /* Darker color for better contrast */
+    font-weight: bold;           /* Bold project name */
+    margin-bottom: 10px;         /* Space below project name */
+}
+
+.project {
+    background-image: url('../../assets/homepage.jpg');
+    background-size: cover;      /* Ensures the image covers the entire area without distortion */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    min-height: 100vh;           /* Ensures the container takes up the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.projectname{
+    color: white                 ;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Adjusted min width for responsiveness */
+    gap: 20px;                  /* Reduced gap between grid items */
+    justify-content: center;     /* Centers the grid as a whole horizontally */
+    align-items: center;         /* Centers the grid items vertically */
+}
+
+.projectimage {
+    width: 70px;                /* Slightly larger image */
+    height: 70px;               /* Height for square image */
+    display: flex;              /* Use flexbox for centering */
+    justify-content: center;     /* Center content horizontally */
+    align-items: center;         /* Center content vertically */
+    border: 2px solid #ddd;     /* Keep the border */
+    border-radius: 50%;         /* Make the border circular */
+    overflow: hidden;           /* Ensure content inside fits the circular border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition effect for hover */
+}
+
+.projectimage:hover {
+    transform: scale(1.1);      /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.projectinside:hover {
+    transform: scale(1.05);      /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.git-button {
+    display: flex;               /* Use flexbox for alignment */
+    align-items: center;        /* Center items vertically */
+    border: 2px solid #ddd;     /* Light border for button */
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;        /* Rounded button */
+    background: transparent;    /* Transparent background */
+    cursor: pointer;   
+    justify-content: center;     /* Center the content */
+    transition: background-color 0.3s; /* Smooth transition for background */
+}
+
+.git-button:hover {
+    background-color: dodgerblue; /* Highlight on hover */
+    color: white;                /* Change text color on hover */
+}
+
+.gitbutton {
+    width: 20px;
+    margin-right: 5px; 
+    justify-content: center;
+    align-items: center;   
+    display: inline-block;
+    text-decoration: none;
+}
+
+.git-link {
+    text-decoration: none;       /* Removes underline */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .projectinside {
+        width: 100%;              /* Full width for smaller screens */
+        height: auto;             /* Allow the height to adjust based on content */
+        padding: 15px;            /* Reduce padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .projectinside {
+        width: 100%;              /* Full width for small mobile screens */
+        padding: 10px;            /* Further reduce padding */
+    }
+}
