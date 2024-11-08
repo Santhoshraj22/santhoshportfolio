@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import { FaBars } from "react-icons/fa";
 import "./Navbar.css";
 import { FaBusinessTime } from "react-icons/fa6";
+import { FaIconName } from 'react-icons/fa';
 import { IoIosHome } from "react-icons/io";
 import { IoPersonSharp } from "react-icons/io5";
 import { GoProjectRoadmap } from "react-icons/go";
